@@ -1,5 +1,5 @@
 {
-	"name": "bot-dialog",
+	"name": "bot-dialog-manager",
 	"version": "1.0.0",
 	"description": "Bot conversation manager",
 	"main": "build/index.js",
@@ -40,7 +40,7 @@
 		"recast",
 		"Recast.AI"
 	],
-	"author": "Francois Triquet",
+	"author": "Francois Triquet <francois.triquet@recast.ai>",
 	"license": "MIT",
 	"dependencies": {
 		"axios": "^0.15.1",
