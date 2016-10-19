@@ -1,0 +1,70 @@
+{
+	"name": "bot-dialog",
+	"version": "1.0.0",
+	"description": "Bot conversation manager",
+	"main": "build/index.js",
+	"scripts": {
+		"test": "ava test",
+		"test:watch": "ava test --watch",
+		"build": "babel src index.js -d build",
+		"lint": "eslint src"
+	},
+	"eslintConfig": {
+		"extends": "zavatta",
+		"parser": "babel-eslint",
+		"globals": {
+			"Set": false,
+			"Promise": false
+		},
+		"rules": {
+			"no-loop-func": 0,
+			"no-console": 1,
+			"camelcase": 0,
+			"no-inline-comments": 0,
+			"id-length": 0,
+			"no-throw-literal": 0,
+			"no-undefined": 0,
+			"no-sync": 0,
+			"max-nested-callbacks": 0
+		}
+	},
+	"babel": {
+		"presets": [
+			"es2015",
+			"stage-0"
+		]
+	},
+	"ava": {
+		"require": [
+			"babel-register"
+	]
+	},
+	"keywords": [
+		"chatbots",
+		"bots",
+		"ai",
+		"nlp",
+		"recast",
+		"Recast.AI"
+	],
+	"author": "Francois Triquet",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^0.15.1",
+		"lodash": "^4.16.4",
+		"mongoose": "^4.6.4"
+	},
+	"devDependencies": {
+		"ava": "^0.16.0",
+		"babel-cli": "^6.14.0",
+		"babel-eslint": "^7.0.0",
+		"babel-preset-es2015": "^6.14.0",
+		"babel-preset-stage-0": "^6.5.0",
+		"babel-register": "^6.14.0",
+		"eslint": "^3.6.0",
+		"eslint-config-zavatta": "^4.2.0",
+		"sinon": "^1.17.6",
+		"sinon-as-promised": "^4.0.2",
+		"sinon-mongoose": "^1.3.0"
+	}
+}
