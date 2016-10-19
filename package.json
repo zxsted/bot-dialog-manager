@@ -18,13 +18,6 @@
 		},
 		"rules": {
 			"no-loop-func": 0,
-			"no-console": 1,
-			"camelcase": 0,
-			"no-inline-comments": 0,
-			"id-length": 0,
-			"no-throw-literal": 0,
-			"no-undefined": 0,
-			"no-sync": 0,
 			"max-nested-callbacks": 0
 		}
 	},
