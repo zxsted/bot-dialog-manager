@@ -1,6 +1,6 @@
 {
   "name": "bot-dialog-manager",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Bot conversation manager",
   "main": "build/index.js",
   "scripts": {
