@@ -512,7 +512,7 @@ var Bot = function () {
                   // This promise resolves the value resolved by the validator or the complete entity
                   // This allows the validator to make some processing or formatting
                   Promise.resolve(validator(entity, conversation.memory)).then(function (res) {
-                    resolv({ name: actionNotion.alias, value: res || entity });
+                    return resolv({ name: actionNotion.alias, value: res || entity });
                   }).catch(function (err) {
                     return rejec(err);
                   });
@@ -536,7 +536,7 @@ var Bot = function () {
 
                     promises.push(new Promise(function (resolv, rejec) {
                       Promise.resolve(validator(entity, conversation.memory)).then(function (res) {
-                        resolv({ name: globalNotions[0].alias, value: res || entity });
+                        return resolv({ name: globalNotions[0].alias, value: res || entity });
                       }).catch(function (err) {
                         return rejec(err);
                       });
