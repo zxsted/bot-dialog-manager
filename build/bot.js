@@ -50,8 +50,8 @@ var Bot = function () {
         db = '' + db + conf.username + ':' + conf.password + '@';
       }
       db = '' + db + conf.hostname + ':' + conf.port + '/' + conf.name;
-      if (!conf.ssl) {
-        db = '{db}?ssl=' + conf.ssl;
+      if (conf.ssl) {
+        db = db + '?ssl=' + conf.ssl;
       }
 
       _mongoose2.default.connect(db, function (err) {
