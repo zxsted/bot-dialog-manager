@@ -136,7 +136,8 @@ class Action {
         // We expect to have a 'reply' method defined
         if (this.reply) {
           return Promise.resolve(this.reply(conversation, recastResponse))
-            .then(resolve).catch(reject)
+            .then(resolve)
+            .catch(reject)
         }
         return reject(new Error('No reply found'))
       }
