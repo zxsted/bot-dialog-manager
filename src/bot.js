@@ -397,9 +397,9 @@ class Bot {
             promises.push(new Promise((resolv, rejec) => {
               // This promise resolves the value resolved by the validator or the complete entity
               // This allows the validator to make some processing or formatting
-              Promise.resolve(validator(entity, conversation.memory)).then(res => {
-                resolv({ name: actionNotion.alias, value: res || entity })
-              }).catch(err => rejec(err))
+              Promise.resolve(validator(entity, conversation.memory))
+                .then(res => resolv({ name: actionNotion.alias, value: res || entity }))
+                .catch(err => rejec(err))
             }))
           } else {
             // search for a notion of any action in the conversation
@@ -413,9 +413,7 @@ class Bot {
 
               promises.push(new Promise((resolv, rejec) => {
                 Promise.resolve(validator(entity, conversation.memory))
-                  .then(res => {
-                    resolv({ name: globalNotions[0].alias, value: res || entity })
-                  })
+                  .then(res => resolv({ name: globalNotions[0].alias, value: res || entity }))
                   .catch(err => rejec(err))
               }))
             }
